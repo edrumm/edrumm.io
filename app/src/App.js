@@ -3,15 +3,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import Index from './pages/index';
 import NotFound from './pages/notFound';
+import Header from './components/header';
+import Footer from './components/footer';
 import './App.scss';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
+      <Header/>
       <Routes>
-        <Route exact path="/" component={<Index/>}/>
-        <Route component={<NotFound/>}/>
+        <Route path="/" element={<Index/>}/>
+        <Route path="*" element={<NotFound/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }
