@@ -1,4 +1,9 @@
-:root {
-    font-size: 1em;
-    font-family: Arial, Helvetica, sans-serif;
+@import "../../base/default";
+@import "../../base/colours";
+
+footer {
+    width: 100vw;
+    color: $white;
+    background-color: $background-dark-grey;
+    padding: 1%;
 }

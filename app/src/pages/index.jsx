@@ -2,7 +2,9 @@ import './styles/index.scss';
 
 const Index = () => {
     return (
-        <p>Index</p>
+        <div className="content">
+            Content
+        </div>
     )
 };
 
