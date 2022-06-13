@@ -4,7 +4,11 @@ import './styles/footer.scss';
 const Footer = () => {
     return (
         <footer>
-            Footer
+            <ul className="footer-items">
+                <li>Icons</li>
+                <li>|</li>
+                <li>&copy; Ewan Drummond {new Date().getUTCFullYear()}</li>
+            </ul>
         </footer>
     );
 };

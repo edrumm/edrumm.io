@@ -16,8 +16,25 @@ header {
     display: flex;
     flex-direction: row;
 
-    li {
+    @media (max-width: 600px) {
+        flex-direction: column;
+
+        .nav-option {
+            display: none;
+        }
+    }
+
+    .dropdown-icon, .nav-option {
         color: $white;
         padding: 1%;
+        cursor: pointer;
+    }
+
+    .dropdown-icon {
+        display: none;
+
+        @media (max-width: 600px) {
+            display: block;
+        }
     }
 }

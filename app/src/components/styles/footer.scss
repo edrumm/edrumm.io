@@ -7,3 +7,15 @@ footer {
     background-color: $background-dark-grey;
     padding: 1%;
 }
+
+.footer-items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    li {
+        margin: 0 0.5%;
+        font-size: 0.8em;
+    }
+}
