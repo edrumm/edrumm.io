@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classNames from "classnames";
 import './styles/header.scss';
 
 const Header = () => {
@@ -7,9 +8,6 @@ const Header = () => {
     const [dropdownIcon, setDropdownIcon] = useState('☰');
 
     const toggleDropdown = () => {
-        /*
-            TODO
-         */
         dropdownIcon === '☰' ? setDropdownIcon('×') : setDropdownIcon('☰');
         setDropdownOpen(!dropdownOpen);
     };
@@ -17,7 +15,9 @@ const Header = () => {
     return (
         <header>
             <nav className="nav-bar">
-                <ul className="nav-list">
+                <ul className={classNames('nav-list', {
+                    'open-list': dropdownOpen
+                })}>
                     <span className="dropdown-icon">
                         <li onClick={toggleDropdown}>{dropdownIcon}</li>
                     </span>

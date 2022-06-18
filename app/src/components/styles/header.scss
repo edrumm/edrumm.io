@@ -5,6 +5,7 @@ header {
     width: 100vw;
     background-color: $background-dark-grey;
     position: fixed;
+    z-index: 1;
 }
 
 .nav-bar {
@@ -15,12 +16,17 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: row;
+    font-family: "Staatliches", sans-serif;
 
     @media (max-width: 600px) {
         flex-direction: column;
 
         .nav-option {
             display: none;
+        }
+
+        &.open-list > .nav-option {
+            display: block;
         }
     }
 

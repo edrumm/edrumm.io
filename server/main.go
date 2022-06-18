@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/edrumm/edrumm.io/server/scripts"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -35,6 +36,8 @@ func main() {
 			log.Fatal(err.Error())
 		}
 	}()
+
+	scripts.Connect()
 
 	if err := server.ListenAndServe(); err != nil {
 		if err != http.ErrServerClosed {
